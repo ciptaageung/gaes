@@ -6,8 +6,8 @@ import (
 	"github.com/labstack/echo/middleware"
 )
 
-var isLoggedIn = middleware.JWTWithConfig(middleware.JWTConfig{
-	SigningKey: []byte("secret"),
+var isAuthenticate = middleware.JWTWithConfig(middleware.JWTConfig{
+	SigningKey: []byte("elevenia"),
 })
 
 func isAdmin(next echo.HandlerFunc) echo.HandlerFunc {

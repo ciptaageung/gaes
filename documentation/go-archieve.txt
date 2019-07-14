@@ -1,0 +1,14 @@
+download golang : http://code.google.com/p/golangide/downloads/list
+setup golang : https://dasarpemrogramangolang.novalagung.com/2-instalasi-golang.html
+ide golang : visual studio code
+
+documentation echo : https://echo.labstack.com/guide
+configuration properties : viper
+scripts: (recommend using bash tool)
+module :
+	go mod init gaes
+	go mod vendor
+	go mod tidy
+	
+run golang L
+	go run *.go

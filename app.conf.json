@@ -1,0 +1,7 @@
+{
+    "appName": "EleveniaAuthApp",
+
+    "server": {
+        "port": 9999
+    }
+}

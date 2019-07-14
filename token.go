@@ -15,13 +15,13 @@ func generateTokenPair() (map[string]string, error) {
 	// The backend can also decode the token and get admin etc.
 	claims := token.Claims.(jwt.MapClaims)
 	claims["sub"] = 1
-	claims["name"] = "Jon Doe"
+	claims["name"] = "admin"
 	claims["admin"] = true
 	claims["exp"] = time.Now().Add(time.Minute * 15).Unix()
 
 	// Generate encoded token and send it as response.
 	// The signing string should be secret (a generated UUID works too)
-	t, err := token.SignedString([]byte("secret"))
+	t, err := token.SignedString([]byte("elevenia"))
 	if err != nil {
 		return nil, err
 	}
@@ -31,7 +31,7 @@ func generateTokenPair() (map[string]string, error) {
 	rtClaims["sub"] = 1
 	rtClaims["exp"] = time.Now().Add(time.Hour * 24).Unix()
 
-	rt, err := refreshToken.SignedString([]byte("secret"))
+	rt, err := refreshToken.SignedString([]byte("elevenia"))
 	if err != nil {
 		return nil, err
 	}
