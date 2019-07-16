@@ -12,3 +12,8 @@ module :
 	
 run golang L
 	go run *.go
+
+download protobuf for windows : https://github.com/protocolbuffers/protobuf/releases
+generate proto :
+	protoc --go_out=. *.proto
+	
